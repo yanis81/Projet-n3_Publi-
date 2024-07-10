@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="./assets/javascript/script.js" defer></script>
+	<script src="https://kit.fontawesome.com/f266b52627.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div id="blackBar">
+			<i class="fa-regular fa-pen-to-square"></i>
+			<p>Mode édition</p>
+		</div>
+		<div id="header">
+			<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="#portfolio">Projets</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						<a class="login_logout" href="../FrontEnd/assets/logIn.html">Connexion</a>
+					</li>
+					<li>
+						<img src="./assets/icons/instagram.png" alt="Instagram">
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Modal Admin -->
+	<aside id="modal1" class="modal" role="dialog" aria-labelledby="titleM" aria-hidden="true" style="display: none" > 
+		<div class="modal-wrapper js-modal-stop">
+			<div id="eject">
+				<button class="js-modal-close" type="button">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<div id="title-modal">
+				<h3 id="titleM">Galerie photo</h3>
+			</div>
+			<div id="gallery-modal">
+				<!-- generation des travaux dynamiquement -->
+			</div>
+			<div id="container-ajout">
+				<button href="#modal2" class="js-modal-projet">Ajouter une photo</button>
+			</div> 
+			<!-- j'essaie de faire fonctionner le button vers la modal prjet -->
+		</div>
+	</aside>
+	<!-- Modal ajout travaux -->
+	<aside id="modal2" class="modal-projet" role="dialog" aria-labelledby="titleM" aria-hidden="true"  style="display: none">
+		<div class="modal-wrapper js-modal-stop">
+			<!-- logo retour et sortie -->
+			<div class="modal-projet-logo">
+				<a href="" class="js-modal-return">
+					<i class="fa-solid fa-arrow-left"></i>
+				</a>
+				<a href="" class="js-modal-close">
+					<i class="fa-solid fa-xmark"></i>
+				</a>
+			</div>
+			<!-- titre de la modal -->
+			<div id="title-modal">
+				<h3 id="titleM">Ajout photo</h3>
+			</div>
+			<!-- formulaire d'envoie du travaux -->
+			<form class="modal-projet-form" action="" enctype="multipart/form-data">
+				<!-- Photo -->
+				<div id="container-photo">
+					<!-- Images Telecharger -->
+					<div id="image_telecharger_images" style="display: none">
+						<div id="image_telecharger">
+							<!-- photo telecharger -->
+						</div>
+					</div>
+
+					<!--Formulaire de Photo -->
+					<div class="form-group-photo">
+						<i class="fa-regular fa-image"></i>
+						<label id="label-photo" for="photo">+ Ajouter une photo</label>
+						<input accept="image/png, image/jpeg" type="file" name="photo" id="photo" class="js-image" value="">
+						<p>jpg, png : 4mo max</p>
+					</div>
+				</div>
+				<!-- Titre -->
+				<div class="form-group-title">
+					<label for="titre">Titre</label>
+					<input class="js-title" type="text" name="titre" id="titre">
+				</div>
+				<!-- Categorie -->
+				<div class="form-group-id">
+					<label for="categorie">Catégorie</label>
+					<select name="categorie" id="categorie" class="js-categoryId">
+						<option value="1">Objets</option>
+						<option value="2">Appartements</option>
+						<option value="3">Hôtels & restaurants</option>
+					</select>
+				</div>
+	
+				<input type="submit" class="js-add-work" value="Valider">
+			</form>
+		</div>
+	</aside>
+
+	<main>
+		<section id="introduction">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="Image de profil de Sophie Bluel">
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison
+					finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+					couleurs dans le respect de l'esprit des lieux et le choix adapté des matériaux. Le suivi du
+					chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG,
+					décorateur(trice)</p>
+			</article>
+		</section>
+
+		<section id="portfolio">
+			<div id="prj-mdf">
+				<h2>Mes Projets</h2>
+				<div id="modifier">
+					<i class="fa-regular fa-pen-to-square"></i>
+					<a href="#modal1" class="js-modal">Modifier</a>
+				</div>
+			</div>
+			<!-- bouton de filtres -->
+			<div id="btn">
+				<button class="btn-flitre" id="btn_tous" >Tous</button>
+				<button class="btn-flitre" id="btn_objet" >Objets</button>
+				<button class="btn-flitre" id="btn_appartement" >Appartements</button>
+				<button class="btn-flitre" id="btn_hotelrestaurant" >Hôtel & Restaurants</button>
+			</div>
+
+			<div class="gallery"></div>
+		</section>
+
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input class="submit-btn" type="submit" value="Envoyer">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+
+</html>

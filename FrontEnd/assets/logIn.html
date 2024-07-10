@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico.png">
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+            rel="stylesheet">
+        <meta name="description" content="">
+        <title>Sophie Bluel - Architecte d'intérieur</title>
+        <script src="../assets/javascript/logIn.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <a href="../../FrontEnd/index.html">
+                    <h1>Sophie Bluel<span>Architecte d'intérieur</span></h1>
+                </a>
+                
+                <nav>
+                    <ul>
+                <!-- Lien vers la section "projets" de la page d'accueil -->
+                        <li>
+                            <a href="../../FrontEnd/index.html#portfolio ">Projets</a>
+                        </li>
+                <!-- Lien vers la section "contact" de la page d'accueil -->
+                        <li>
+                            <a href="../../FrontEnd/index.html#contact">Contact</a>
+                        </li>
+                <!-- Lien vers la page de connexion -->
+                        <li>
+                        <p id="login-bold">Connexion</p> 
+                        </li>
+                        <li><img src="../assets/icons/instagram.png" alt="Instagram"></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="mainForm">
+                <!-- Le formulaire de connexion permet à l'utilisateur de se connecter à son compte en saisissant son e-mail et son mot de passe -->
+                <h1 id="login-header">Log In</h1>
+            <div id="container_form">
+                <form id="login-form" action="#" method="post">
+                <!-- Étiquette affichant les erreurs potentielles lors de la connexion -->
+                <div id="container_error">
+                    <label id="error"> </label>
+                </div>
+                <!-- Étiquette pour l'adresse e-mail de l'utilisateur -->
+                <label for="email" class="titre">E-mail</label>
+                <input type="email" name="email" id="email" class="login" required />
+                <!-- Étiquette pour le mot de passe de l'utilisateur -->
+                <label for="password" class="titre">Mot de passe</label>
+                <input type="password"name="password"id="password"class="login"required/>
+                <!-- Bouton de soumission pour se connecter -->
+                <input type="submit" value="Se connecter" id="login-form-submit" class="submit-btn" />
+                <!-- Lien pour réinitialiser le mot de passe oublié -->
+                <div id="container_oublier">
+                    <a class="login-form-oublie" href="#">Mot de passe oublié</a>
+                </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer_login">
+		</footer>
+    </body>
+</html>
